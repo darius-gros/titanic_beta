@@ -4,8 +4,13 @@
 The goal was to predict if the passengers of he Titanic would survive or not: I needed to create an algorithm predicting a binary outcome.
 For that challenge, a training dataset with the outcome was provided and we had to train our model on it to predict the outcome of a test set, which of course did not have the outcome in it, that is to say the dependent variable.
 
+Titanic_Kneighbors
+
 The dataset had multiple columns of data, but to begin with, I wanted to create a simple model to see what kind of accuracy I would get from training on just the essential data.
 So, on my first model, I used only the 'sex' and passenger class 'Pclass' categories for this classification problem. I trained a couple different models (Naive Bayes, KNN, Random Forest) on the training set and applied k-fold cross validation to check the mean and variance that the models produced. Accuracy for the best ones seems to converge around 78%. I also tried using a simple ANN algorithm, but it also seemed to converge at a 78% accuracy. I finally choose to use the K Nearest Neighbors classifier because it would give a slightly lower variance than the other classification models. 
+
+
+EDA XGB Titanic
 
 Trying to improve the model, I did more research on exploratory analysis (EAD), classifier models & how to optimally boost the parameters.
 It turned out I needed to do :
