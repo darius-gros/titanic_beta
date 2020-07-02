@@ -5,7 +5,7 @@ Titanic beta 2
 Data Exploration & Data Cleaning of Titanic Dataset improved 
 Beta 3 (coming soon)
 -Construction of pipeline to prevent leakage of data during grid search with XGBoost.
--Export of visualization results                        
+-Export of visualization results + business presentation                       
 @author: dariu
 """
 
@@ -86,8 +86,7 @@ y = y[(z<3).all(axis=1)] #dependent variable
 y.shape
 
 #no feature scaling since xgb is a tree based model
-##########################################################################################
-
+#######################################################################################################
 
 from sklearn.model_selection import cross_val_score 
 from sklearn.model_selection import GridSearchCV 
@@ -127,7 +126,7 @@ accuracies_xgb1 = cross_val_score(xgb1, X_train, y_train, cv = 10)
 accuracies_xgb1.mean()
 accuracies_xgb1.std()
 
-########################################################################################
+#########################################################################################################
 
 
 #improve model with grid_search by optimizing parameters
@@ -253,8 +252,6 @@ gsearch10.fit(X_train, y_train)
 gsearch10.best_params_, gsearch10.best_score_
 #250
 
-#some additional visualization to provide : importance of features when performing grid search using matplotlib
-
 ########################################################################################################
 
 #creating final object with parameters optimized
@@ -285,15 +282,10 @@ print(cm)
 accuracies = cross_val_score(xgb_final, X_train, y_train, cv = 10)
 accuracies.mean()
 accuracies.std()
-#give accuracy of 82% lower than when testing model in gridsearch at 86.5%.
-#might have slight overfitting - need to look at other regularization parameters for xgb classifier object
 
 ############################################################################################################
 
 #predict binary outcome of new file
-
-
-
 
 test_data = pd.read_csv('test.csv')
 test_data['Embarked'].fillna('S', inplace = True)
