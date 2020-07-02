@@ -9,10 +9,7 @@ Titanic_Kneighbors
 The dataset had multiple columns of data, but to begin with, I wanted to create a simple model to see what kind of accuracy I would get from training on just the essential data.
 So, on my first model, I used only the 'sex' and passenger class 'Pclass' categories for this classification problem. I trained a couple different models (Naive Bayes, KNN, Random Forest) on the training set and applied k-fold cross validation to check the mean and variance that the models produced. Accuracy for the best ones seems to converge around 78%. I also tried using a simple ANN algorithm, but it also seemed to converge at a 78% accuracy. I finally choose to use the K Nearest Neighbors classifier because it would give a slightly lower variance than the other classification models. 
 
-
-
 EDA XGB Titanic
-
 Trying to improve the model, I did more research on exploratory analysis (EAD), classifier models & how to optimally boost the parameters.
 It turned out I needed to do :
 
@@ -24,6 +21,13 @@ EAD : I started by displaying some graphs using seaborn and matplotlib to have s
 
 The XGB Classifier produced a higher predictive probability than other classifiers and a plus is that the nature of the XGB Classifier takes care of overfitting on its own thanks to the learning rate parameter. I found that the XGB Classifier combined with thorough parameter tuning via GridSearchCV gave me the highest probability, around 86%. 
 
-Limitations
+Titanic Beta_2
 
-Some limitations of the subject: feature engineering of the 'cabin' column data. There were a lot more missing values than present which would have been time consuming. Some further documentation research is needed before applying feature engineering efficiently. Moreover, we could also try to encode the passenger class column 'Pclass' instead of treating it as a numerical value to see if it would yield a different result. In addition, not all paramaters of the XGB classifier were used, we could dig into finding the optimal value of those to increase the accuracy of our model. Also design of the code could be optimized via function creation to avoid redundancy. Next version, will use pipeline to prevent data leakage.
+1. Improvement of data cleaning, data visualization and training of the model.
+Resulted in a .7% improvement on test set predicitions.
+
+Beta_3 (coming soon)
+
+Pipeline to prevent data leakage
+Better code design
+Business Presentation
