@@ -2,10 +2,7 @@
 """
 Created on Wed Jul  1 11:19:54 2020
 Titanic beta 2
-Data Exploration & Data Cleaning of Titanic Dataset improved 
-Beta 3 (coming soon)
--Construction of pipeline to prevent leakage of data during grid search with XGBoost.
--Export of visualization results + business presentation                       
+Data Exploration & Data Cleaning of Titanic Dataset improved                     
 @author: dariu
 """
 
