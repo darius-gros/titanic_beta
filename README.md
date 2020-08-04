@@ -24,4 +24,4 @@ The XGB Classifier produced a higher predictive probability than other classifie
 Titanic Beta_2
 
 1. Improvement of data cleaning, data visualization and training of the model.
-Resulted in a .7% improvement on test set predicitions.
+Resulted in a .7% improvement on test set predictions.
