@@ -44,7 +44,7 @@ X.isna().sum() #no null values anymore, okay good
 #check age distribution given class : use boxplot   
 sns.boxplot(x = 'Pclass', y = 'Age', data = X, palette = 'winter')
 
-#function to replace missing value by age given class
+#replace missing value by age given class
 mean_age = X['Age'].mean()
 X['Age'].fillna(mean_age, inplace = True)
 
