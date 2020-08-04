@@ -51,10 +51,6 @@ dataset = dataset.drop(['Cabin'], axis = 1)
 #passenger id, ticket and name have no significance for survival prediction. drop them
 dataset = dataset.drop(['PassengerId', 'Ticket', 'Name'], axis = 1)
 
-
-#getmean value of age for each class and replace na values for age if working with
-#a non based tree classifier
-
 #encode categorical as dummies
 data_without_category = dataset.drop(['Embarked', 'Sex'], axis = 1)
 embark = pd.get_dummies(dataset['Embarked'], drop_first = False)
