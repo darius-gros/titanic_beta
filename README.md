@@ -25,9 +25,3 @@ Titanic Beta_2
 
 1. Improvement of data cleaning, data visualization and training of the model.
 Resulted in a .7% improvement on test set predicitions.
-
-Beta_3 (coming soon)
-
-Pipeline to prevent data leakage
-Better code design
-Business Presentation
