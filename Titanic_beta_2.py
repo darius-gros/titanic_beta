@@ -49,7 +49,7 @@ mean_age = X['Age'].mean()
 X['Age'].fillna(mean_age, inplace = True)
 
 
-#check for outliers for numerical columns: use, boxplot, z score and interquartile range
+#check for outliers for numerical columns: use boxplot, z score.
 sns.boxplot(x=X['Age'])
 sns.boxplot(x = X['SibSp'])
 sns.boxplot(x=X['Parch'])
@@ -77,7 +77,6 @@ print (np.where(z > 3))
 X_without_outliers = X_categorized_outliers[(z < 3).all(axis=1)]
 X_without_outliers.shape
 
-#overwrite X for cleaner future input
 X = X_without_outliers   #independent variables
 y = y[(z<3).all(axis=1)] #dependent variable
 y.shape
